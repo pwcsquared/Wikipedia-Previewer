@@ -1,0 +1,167 @@
+body {
+  font-family: monospace;
+  color: #fff;
+  background-color: #004080;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.random {
+  margin: 2.5em;
+  display: flex;
+  color: #aaa;
+}
+
+.random a {
+  margin: auto;
+}
+
+.random a:hover {
+  color: #fff;
+}
+
+.inputWrap {
+  display: flex;
+  margin: 6em 39% 3em;
+}
+
+input {
+  font-family: monospace;
+  font-size: 2em;
+  color: #fff;
+  background-color: transparent;
+  padding: 0.5em;
+  border: none;
+  border-left: 3px solid #aaa;
+}
+
+input:focus {
+  border-left: 3px solid #fff;
+  outline: none;
+}
+
+#search {
+  height: 51px;
+  width: 51px;
+  margin: auto;
+  border-radius: 5em;
+  border: 4px solid salmon;
+}
+
+.expand {
+  animation: expand 1.5s infinite alternate;
+}
+
+#check {
+  display: flex;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  height:31px;
+  width: 31px;
+  border-radius: 100%;
+  background-color: #ddd;
+}
+
+#mark1 {
+  height: 19px;
+  width: 3px;
+  background-color: #2eb82e;
+  margin: auto;
+  position: relative;
+  right: -3px;
+  transform: rotate(220deg);
+}
+
+#mark2{
+  height: 3px;
+  width: 11px;
+  background-color: #2eb82e;
+  position: absolute;
+}
+
+.spin1 {
+  animation: spin1 0.7s infinite alternate;
+}
+
+.spin2 {  
+  animation: spin2 0.7s infinite alternate;
+}
+
+@keyframes expand {
+  0%{
+    border-radius: 100%;
+  }
+  20% {
+    border-radius: 1em;
+    width: 51px;
+  }
+  50% {
+    border-radius: 1em;
+    width: 900px;
+    height: 51px;
+  }
+  100% {
+    border-radius: 1em;
+    width: 900px;
+    height: 1500px;
+  }
+}
+
+@keyframes spin1 {
+  100% {
+    height: 21px;
+    width: 3px;
+    background-color: #cc3300;
+    right: 0px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes spin2 {  
+  100% {
+    content: "";
+    height: 3px;
+    width: 21px;
+    background-color: #cc3300;
+    position: absolute;
+    margin-top: 9px;
+    margin-left: -9px;
+  }
+}
+
+.results {
+  display: none;
+}
+
+.resultBox h2 {
+  padding-left: 0.5em;
+}
+
+.resultBox p {
+  padding-left: 0.5em;
+}
+
+.resultBox {
+  padding: 0.25em 0;
+  margin-top: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: block;
+  border-left: 3px solid #aaa;
+}
+
+.resultBox:hover {
+  border-left-color: #fff;
+  animation: colorFade 0.25s forwards;
+}
+
+@keyframes colorFade {
+  100% {
+    background-color: rgba(0,0,100,0.5);
+  }
+}
