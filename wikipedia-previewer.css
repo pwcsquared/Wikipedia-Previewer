@@ -2,6 +2,9 @@ body {
   font-family: monospace;
   color: #fff;
   background-color: #004080;
+  background-image: linear-gradient(to bottom, #165696, #004080);
+  background-repeat: no-repeat;
+  margin: 0;
 }
 
 a {
@@ -25,10 +28,13 @@ a {
 
 .inputWrap {
   display: flex;
-  margin: 6em 39% 3em;
+  justify-content: center;
+  margin: 6em auto 2em;
+  max-width: 90%;
 }
 
 input {
+  margin-left: 2em;
   font-family: monospace;
   font-size: 2em;
   color: #fff;
@@ -36,6 +42,7 @@ input {
   padding: 0.5em;
   border: none;
   border-left: 3px solid #aaa;
+  max-width: 100%;
 }
 
 input:focus {
@@ -44,8 +51,9 @@ input:focus {
 }
 
 #search {
-  height: 51px;
+  min-height: 51px;
   width: 51px;
+  max-width: 95%;
   margin: auto;
   border-radius: 5em;
   border: 4px solid salmon;
@@ -62,6 +70,7 @@ input:focus {
   margin-left: 10px;
   height:31px;
   width: 31px;
+  border: 0;
   border-radius: 100%;
   background-color: #ddd;
 }
@@ -102,12 +111,12 @@ input:focus {
   50% {
     border-radius: 1em;
     width: 900px;
-    height: 51px;
+    min-height: 51px;
   }
   100% {
     border-radius: 1em;
     width: 900px;
-    height: 1500px;
+    min-height: 1500px;
   }
 }
 
@@ -155,7 +164,8 @@ input:focus {
   border-left: 3px solid #aaa;
 }
 
-.resultBox:hover {
+.resultBox:hover,
+a:focus .resultBox{
   border-left-color: #fff;
   animation: colorFade 0.25s forwards;
 }
@@ -164,4 +174,9 @@ input:focus {
   100% {
     background-color: rgba(0,0,100,0.5);
   }
+}
+
+
+@media(max-width: 480px) and (min-width: 1px){
+  body{font-size: small}
 }

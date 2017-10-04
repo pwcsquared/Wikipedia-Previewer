@@ -1,14 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wikipedia Previewer</title>
+	<link rel="stylesheet" type="text/css" href="wikipedia-previewer.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+</head>
+
+<body>
 <div class="inputWrap">
-  <input autofocus placeholder="enter search term">
+	<input autofocus placeholder="enter search term">
 </div>
 <div id="search">
-  <div id="check">
-    <div id="mark1">
-      <div id="mark2"></div>
-    </div>
-  </div>
-  <div class="results"></div>
+	<button id="check">
+		<div id="mark1">
+			<div id="mark2"></div>
+		</div>
+	</button>
+	<div class="results"></div>
 </div>
+
 <div class="random">
-  <a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank">Take me somewhere random!</a>
+	<a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank">Take me somewhere random!</a>
 </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script src="wikipedia-previewer.js"></script>
+</body>
+</html>

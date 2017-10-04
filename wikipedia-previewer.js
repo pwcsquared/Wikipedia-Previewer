@@ -1,6 +1,7 @@
 $(document).ready(function(){
   var openFrame = false;
   $("#search").css("animation-play-state","paused");
+
   //event listeners to control css animations
   document.addEventListener("animationiteration",animEvent);
   function animEvent(event){
@@ -13,19 +14,21 @@ $(document).ready(function(){
       $("#mark1, #mark2").css("animation-play-state","paused");
     }
   };
+
   //clicking the checkmark/x and pressing enter on the input do the same thing
   $("#check").click(function(){
     displayResults();
   });
+
   $("input").keydown(function(event){    
     if(event.which == 13){
       displayResults();
     }
-  }); 
+  });
+
   //function to control the animation and display of API data
   var displayResults = function(){
     var playState = $("#search").css("animation-play-state");
-    console.log(playState);
     var searchTerm = $("input").val();
     if (playState !== "running" && searchTerm && !openFrame){
       $("#search").addClass("expand");
@@ -40,6 +43,7 @@ $(document).ready(function(){
       openFrame = false;
     }
   };
+
   //function to make API call
   function wikiSearch(){
     var searchTerm = $("input").val();
